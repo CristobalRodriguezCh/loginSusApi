@@ -198,6 +198,9 @@ return [
         //jwt
         Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
 
+        //directivas personalizada para blade
+        App\Providers\BladeServiceProvider::class,
+
     ],
 
     /*

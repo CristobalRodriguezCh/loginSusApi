@@ -17,6 +17,7 @@
               <form method="post" action="{{route('edit')}}">
                 @csrf
                 {{-- @method('PUT') --}}
+             
                 <div class="input-group mb-3">
                   @error('name')
                      <div class="row col-12 ms-1">{{$message}}</div> 

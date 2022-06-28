@@ -10,16 +10,23 @@
         @if ( isset($msgSesion) )
         <span ><p class="alert alert-success" role="alert">{{$msgSesion}}</p></span>
         @endif
-        <form method="POST">
+        <form method="POST" action="{{route('register')}}">
           @csrf
+            <div class="mb-3">
+              <label for="name" class="form-label">Nombre :</label>
+              <input required value="{{old('name')}}" name="name" type="text" class="form-control" id="name">
+              @error('name')
+                <span><p>{{$message}}</p></span>
+              @enderror
+            </div>
             <div class="mb-3">
               <label for="Email" class="form-label">Email :</label>
               <input required value="{{old('email')}}" name="email" type="email" class="form-control" id="Email">
               @error('email')
                 <span><p>{{$message}}</p></span>
               @enderror
-              
             </div>
+
             <div class="mb-3">
               <label for="Password" class="form-label">Password :</label>
               <input required name="password" type="password" class="form-control" id="Password">
@@ -31,8 +38,13 @@
               <input type="checkbox" class="form-check-input" id="exampleCheck1">
               <label class="form-check-label" for="exampleCheck1">Check me out</label>
             </div> --}}
-            <button type="submit" class="btn btn-primary">Iniciar sesion</button>
-            <a href="{{route('registerView')}}" class="btn btn-success">Registrame</a>
+            <button class="btn btn-success" type="submit">
+                <i class="fa-solid fa-address-card"></i>
+                Registrarme</button>
+            <a href="{{route("loginView")}}" class="btn btn-outline-primary">
+                <i class="fa-solid fa-arrow-left"></i>
+             Regresar</a>
+            
         </form>
     </div>
 </div>

@@ -13,7 +13,7 @@
           Perfil</a>
         </li>
         <li class="nav-item d-flex align-items-center">
-          <a class="a" href="#">Mi suscripcion</a>
+          <a class="a" href="{{route('MiSubscrips')}}">Mi suscripcion</a>
         </li>
         <li class="nav-item d-flex align-items-center">
           <a class="a" href="#">mis pagos</a>
