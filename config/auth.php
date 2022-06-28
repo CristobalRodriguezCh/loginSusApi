@@ -14,7 +14,7 @@ return [
     */
 
     'defaults' => [
-        'guard' => 'api',
+        'guard' => 'web',//como solucionar para traabrjar con la api y el web
         'passwords' => 'users',
     ],
 

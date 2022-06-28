@@ -8,11 +8,7 @@ use Illuminate\Support\Facades\Validator;
 use App\Models\User;
 
 class LoginC extends Controller {
-    /**
-     * Create a new AuthController instance.s
-     *
-     * @return void
-     */
+
     public function __construct()
     {
         $this->middleware('auth:api', ['except' => ['login','register']]);

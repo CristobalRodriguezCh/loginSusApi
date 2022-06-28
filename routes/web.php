@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('login.login');
-});
+Route::view('login','login.login')->name('loginView')->middleware('guest');
+Route::view('home','home')->name('home')->middleware('auth:web');
+Route::view('profile','profile.profile')->name('profile')->middleware('auth:web');
+
+
+Route::post('login','App\Http\Controllers\LoginCw@login')->middleware('guest');
+Route::post('logout','App\Http\Controllers\LoginCw@logout')->name('logout')->middleware('auth:web');
+Route::post('edit','App\Http\Controllers\LoginCw@edit')->name('edit')->middleware('auth:web');
