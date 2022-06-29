@@ -21,7 +21,7 @@ class Plan extends Model
     protected $timestamp = false;
 
 
-    public function plan(){
-        return $this->hasMany(Suscripcion::class,'plan_id');
+    public function suscripcion(){
+        return $this->hasMany('App\Suscripcion');
     }
 }

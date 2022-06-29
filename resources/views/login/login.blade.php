@@ -10,7 +10,7 @@
         @if ( isset($msgSesion) )
         <span ><p class="alert alert-success" role="alert">{{$msgSesion}}</p></span>
         @endif
-        <form method="POST">
+        <form method="POST" action="{{route('login')}}">
           @csrf
             <div class="mb-3">
               <label for="Email" class="form-label">Email :</label>

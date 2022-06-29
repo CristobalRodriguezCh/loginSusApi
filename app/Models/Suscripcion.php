@@ -26,6 +26,6 @@ class Suscripcion extends Model
 
 
     public function plan(){
-        return $this->belongsTo(Plan::class,'id');
+        return $this->belongsTo(Plan::class,'plan_id');
     }
 }

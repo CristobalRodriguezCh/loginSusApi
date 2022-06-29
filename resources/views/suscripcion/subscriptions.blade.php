@@ -8,7 +8,12 @@
         <hr>
 
         <div>
-          @if ($suscripcion)
+          @if (isset($msg))
+          <div class="alert alert-success" role="alert">
+            {{$msg}}
+          </div>
+          @endif
+          @if (isset($suscripcion) &&  isset($plan))
           <div class="card">
             <div class="card-header">
               Usted se encuentra suscripto al siguiente plan
@@ -35,7 +40,8 @@
           </div>
           @else
             <div class="alert alert-info" role="alert">
-              Actualmente no esta suscripto a ningun plan, por favor escoga un plan <a href="#" class="alert-link">Click Aqui !!</a>
+              Actualmente no esta suscripto a ningun plan, por favor escoga un plan
+               <a href="{{route('planes')}}" class="alert-link">Click Aqui !!</a>
             </div>
           
               

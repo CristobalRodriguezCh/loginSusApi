@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>LoginSuscrip</title>
     <link href="{{ mix('css/app.css') }}" rel="stylesheet" type="text/css" />
+    @yield('styles')
 </head>
 <body>
     <div class="container">
